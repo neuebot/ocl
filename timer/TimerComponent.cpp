@@ -13,7 +13,7 @@ namespace OCL
 
     TimerComponent::TimerComponent( std::string name /*= "os::Timer" */ )
         : TaskContext( name, PreOperational ), port_timers(32), mtimeoutEvent("timeout"),
-          mtimer( port_timers, mtimeoutEvent, name ),
+          mtimer( port_timers, mtimeoutEvent ),
           waitForCommand( "waitFor", &TimerComponent::waitFor, this), //, &TimerComponent::isTimerExpired, this),
           waitCommand( "wait", &TimerComponent::wait, this) //&TimerComponent::isTimerExpired, this)
     {
