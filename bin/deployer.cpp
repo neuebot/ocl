@@ -54,6 +54,7 @@
 #include "logging/Category.hpp"
 #endif
 
+using namespace std;
 using namespace RTT;
 namespace po = boost::program_options;
 
